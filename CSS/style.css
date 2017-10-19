@@ -1,4 +1,168 @@
-.photo {
-  padding: 32px 24px;
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  color: dimgray;
+}
+
+.section {
+
+}
+
+div, header, footer, nav, ul, li, .section {
+  border: .5px solid magenta;
+}
+/* Header Section */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+#logo {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 24px;
+  height: 32px;
+  font-size: 1rem;
+}
+
+#logo img {
+  height: 32px;
+  width: auto;
+}
+
+#logo p {
+  font-weight: bold;
+}
+
+#logo span {
+  color: gainsboro;
+}
+
+nav {
+  margin-right: 8px;
+}
+
+nav ul {
+  display: inline-flex;
+}
+
+nav ul li {
+  margin-right: 16px;
+}
+
+/* Jumbotron Section*/
+.jumbo {
+  display: inline-flex;
+}
+
+/* not working */
+
+#jumbotron {
   width: 60%;
 }
+
+#jumbotron img {
+  width: 100%;
+  height: auto;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+  padding-left: 24px;
+}
+
+#info h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#button {
+  color: white;
+  background-color: grey;
+  padding: 8px 0px;
+  text-align: center;
+  width: 60%;
+  font-size: 1.2rem;
+}
+
+/* Main Page Information Section */
+.information {
+  display: flex;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding-right: 24px;
+}
+
+.right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.column:last-child {
+  background-color: gainsboro;
+}
+
+.column {
+
+}
+
+.columnimage {
+  width: 35%;
+  margin: 16px;
+}
+
+.columnimage img {
+  width: 100%;
+}
+
+.columninfo {
+  width: 65%;
+}
+
+.read {
+  color: cadetblue;
+}
+
+/* Learning Section */
+#majors {
+  margin: 32px 72px 0px 48px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.major {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.major img {
+  height: auto;
+  width: 100%;
+}
+
+.major-info {
+  margin: 16px 0px 24px 16px;
+}
+
+.courses {
+  padding: 8px 0px;
+}
+
+/* Thesis Section */
+.thesis {
+  display: flex;
+}
+
+/* Footer section */
