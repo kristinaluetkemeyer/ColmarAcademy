@@ -7,6 +7,12 @@
   line-height: 1.3;
 }
 
+@media only screen and (max-width: 600px) {
+  .content {
+    max-width: 600px;
+  }
+}
+
 h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -32,13 +38,20 @@ p {
 }
 
 .section {
-  padding: 32px 0px 32px 24px;
+  padding: 2rem 0 2rem 1.5rem;
   display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .section {
+    padding: 0;
+    display: block;
+  }
 }
 
 .title {
   text-align: center;
-  padding-top: 32px;
+  padding-top: 2rem;
 }
 
 #border {
@@ -54,19 +67,19 @@ p {
 header {
   display: flex;
   justify-content: space-between;
-  height: 64px;
+  height: 4rem;
   align-items: center;
 }
 
 #logo {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  margin-left: 24px;
-  height: 32px;
+  margin-left: 1.5rem;
+  height: 2rem;
 }
 
 #logo img {
-  height: 32px;
+  height: 2rem;
   width: auto;
 }
 
@@ -80,8 +93,12 @@ header {
   font-weight: normal;
 }
 
+.mobile {
+  display: none;
+}
+
 nav {
-  margin-right: 8px;
+  margin-right: 0.66rem;
 }
 
 nav ul {
@@ -89,7 +106,20 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 16px;
+  margin-right: 1rem;
+}
+
+/* Responsive design - Header */
+@media only screen and (max-width: 600px) {
+  #logo {
+    width: 100%;
+    margin-left: 0;
+    justify-content: space-around;
+  }
+
+  .mobile {
+    display: block;
+  }
 }
 
 /* Jumbotron Section*/
@@ -111,16 +141,16 @@ nav ul li {
   flex-direction: column;
   width: 40%;
   justify-content: center;
-  padding-left: 24px;
+  padding-left: 1.5rem;
 }
 
 #info h3 {
-  padding: 24px 0px;
+  padding: 1.5rem 0;
 }
 
 #button {
   background-color: grey;
-  padding: 8px 0px;
+  padding: 0.66rem 0;
   text-align: center;
   width: 60%;
   font-size: 1.2rem;
@@ -129,6 +159,31 @@ nav ul li {
 #button a {
   color: white;
   text-decoration: none;
+}
+
+/* Responsive design - Jumbotron */
+@media only screen and (max-width: 600px) {
+  #jumbotron {
+    width: 100%;
+  }
+
+  #info {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  #info h3 {
+    padding: 2rem 1.5rem 1.5rem 0;
+  }
+
+  #info h1 {
+    font-size: 2.4rem;
+    padding-right: 1.5rem;
+  }
+
+  #button {
+    width: 90%;
+  }
 }
 
 /* Main Page Information Section */
@@ -148,17 +203,17 @@ nav ul li {
 }
 
 .practice h1 {
-  padding: 32px 0px 24px 0px;
+  padding: 2rem 0 1.5rem 0;
 }
 
 .practice p {
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 }
 
 .left-border {
   border-left: 1px solid gainsboro;
 }
-/* not full length */
+
 .columns {
   width: 40%;
   display: block;
@@ -178,12 +233,12 @@ nav ul li {
   width: 100%;
   display: flex;
   align-items: center;
-  min-height: 150px;
+  min-height: 9.375rem;
 }
 
 .columnimage {
   width: 35%;
-  margin: 16px;
+  padding: 1rem;
 }
 
 .columnimage img {
@@ -193,11 +248,11 @@ nav ul li {
 
 .columninfo {
   width: 65%;
-  padding-right: 16px;
+  padding-right: 1rem;
 }
 
 .columninfo p {
-  padding-top: 8px;
+  padding-top: 0.66rem;
 }
 
 .grey {
@@ -208,6 +263,54 @@ nav ul li {
   color: cadetblue;
 }
 
+/* Responsive design - Main Page info section */
+@media only screen and (max-width: 600px) {
+  /* Main page information section */
+  .practice {
+    display: none;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .columns {
+    width: 100%;
+  }
+
+  .column {
+    display: block;
+    justify-content: center;
+  }
+
+  .columnimage {
+    width: 100%;
+  }
+
+  .columnimage img {
+    max-height: 15rem;
+    object-fit: cover;
+  }
+
+  .columninfo {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .column:first-child {
+    border-top: none;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .column:nth-child(2n) {
+    border-top: none;
+  }
+
+  .grey {
+    background-color: white;
+  }
+}
 
 /* Start Learning Section */
 #learning {
@@ -218,12 +321,12 @@ nav ul li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 32px 72px;
+  padding: 2rem 4.5rem;
 }
 
 .major {
-  width: 250px;
-  margin-bottom: 32px;
+  width: 15.625rem;
+  margin-bottom: 2rem;
 }
 
 .major img {
@@ -233,23 +336,66 @@ nav ul li {
 
 .major-info {
   background-color: white;
-  padding: 16px 16px 24px 16px;
-  min-height: 114px;
+  padding: 1rem 1rem 1.5rem 1rem;
+  min-height: 7.3rem;
 }
 
 .courses {
-  padding: 8px 0px;
+  padding: 0.66rem 0;
+}
+
+/* Start Learning section - major names */
+@media only screen and (max-width: 600px) {
+  #learning {
+    background-color: white;
+    border: 1px solid gainsboro;
+  }
+
+  #majors {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  #majors img, #majors p {
+    display: none;
+  }
+
+  .major {
+    width: 100%;
+    margin-bottom: 0.66rem;
+  }
+
+  .major-info {
+    background-color: gainsboro;
+    padding: 1rem 1rem 1.5rem 1rem;
+    min-height: inherit;
+  }
 }
 
 /* Thesis Section */
 #urban h3 {
-  padding: 24px 0px 8px 0px;
+  padding: 1.5rem 0 0.66rem 0;
 }
 
 #urban {
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 
+/* Responsive design - thesis section */
+@media only screen and (max-width: 600px) {
+  .video {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  #urban {
+    display: none;
+  }
+
+  .no-mobile {
+    display: none;
+  }
+}
 
 /* Footer Section */
 footer {
@@ -257,7 +403,7 @@ footer {
   justify-content: space-between;
   border-top: 1px solid gainsboro;
   border-bottom: 1px solid gainsboro;
-  padding: 16px 24px 32px 24px;
+  padding: 1rem 1.5rem 2rem 1.5rem;
 }
 
 #tp {
@@ -265,5 +411,21 @@ footer {
 }
 
 #tp p {
-  margin-right: 16px;
+  margin-right: 1rem;
+}
+
+/* Responsive design - Footer section */
+@media only screen and (max-width: 600px) {
+  footer {
+    display: block;
+    padding: 1.5rem 0 1rem 1rem;
+  }
+
+  #tp {
+    display: none;
+  }
+
+  #copyright {
+    padding-top: 1rem;
+  }
 }
